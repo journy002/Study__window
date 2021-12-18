@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <script src="./test.js" defer></script>
+    </head>
+    <body>
+        <script>
+            // script 파일을 defer로 불러오게 되면 HTML을 전부 파싱, 즉 분석이 완료되면
+            // script를 먼저 출력됩니다. 그 다음 DOMContent가 호출 되고 그 다음 load가 호출됩니다.
+
+            // only document, HTML이 로드되면 실행됩니다.
+            window.addEventListener("DOMContentLoaded", () => {
+                console.log("DOMContentLoaded success");
+            });
+            // after resource (css, images), html, css, img 모든 것들이 다 다운로드가 완료되면 실행됩니다.
+            window.addEventListener("load", () => {
+                console.log("load success");
+            });
+        </script>
+    </body>
+</html>
