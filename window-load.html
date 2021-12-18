@@ -19,6 +19,14 @@
             window.addEventListener("load", () => {
                 console.log("load success");
             });
+            // 사용자가 page를 나가기 직전에 불려오는 함수 입니다.
+            window.addEventListener("beforeload", () => {
+                console.log("page will be off");
+            });
+            // 사용자가 page를 나가고 나서 불려오는 함수 입니다.
+            window.addEventListener("unload", () => {
+                console.log("page is unloaded");
+            });
         </script>
     </body>
 </html>
